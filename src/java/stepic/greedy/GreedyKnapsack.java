@@ -1,6 +1,5 @@
 package stepic.greedy;
 
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Arrays;
 import java.util.Scanner;
@@ -36,7 +35,7 @@ public class GreedyKnapsack {
     }
 
     private void run() throws FileNotFoundException {
-//        Scanner input = new Scanner(new File("input.txt"));
+//        Scanner input = new Scanner(new File("greedyknapsack.txt"));
         Scanner input = new Scanner(System.in);
         int n = input.nextInt();
         int W = input.nextInt();
@@ -46,10 +45,7 @@ public class GreedyKnapsack {
         }
         Arrays.sort(items);
 
-        for (int i = 0; i < items.length; i++) {
-            Item item = items[i];
-            System.out.println(item + ". Relation: " + (double)item.cost/item.weight);
-        }
+//        Arrays.stream(items).forEach(item -> System.out.println(item + ". Relation: " + (double)item.cost/item.weight));
 
         double result = 0;
         for (Item item : items) {
@@ -61,7 +57,7 @@ public class GreedyKnapsack {
                 break;
             }
         }
-        System.out.println("Result: " + result);
+        System.out.println(result);
     }
 
     public static void main(String[] args) throws FileNotFoundException {
