@@ -1,4 +1,4 @@
-package geeksforgeeks.linkedlist;
+package linkedlist;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
