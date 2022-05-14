@@ -24,3 +24,12 @@ and an additional operation getMin() which should return minimum element from th
 All these operations of SpecialStack must be O(1).
 To implement SpecialStack, you should only use standard Stack data structure and no other data structure like arrays, list, .. etc
 The interesting part is, how to handle the case when minimum element is removed.
+
+### Find the kth smallest element in a given unsorted array.
+#### _ArrayKthSmallestElement.class_
+
+### Find the single occurring element in an array, in which all other elements are occurring twice.
+#### _ArrayFindSingleOccurringElement.class_
+
+### Reverse a string without altering the position of any special characters present in the string.
+#### _StringReverse.class_
