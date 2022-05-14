@@ -9,3 +9,10 @@ Output: Balanced
 
 Input: exp = “[(])”
 Output: Not Balanced 
+
+### Reverse of LinkedList
+#### ReverseLinkedList.class - reverse with additional Node structure
+#### ReverseJavaLinkedList - revers with Java LinkedList structure
+
+### Find second highest element in Array
+#### ArrayFindSecondHighestElement.class
