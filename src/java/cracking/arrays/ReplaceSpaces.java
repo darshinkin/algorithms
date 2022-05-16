@@ -25,16 +25,20 @@ public class ReplaceSpaces {
             }
         }
         int newLength =  length + spaces * 2;
-        chars[newLength] = '\0';
+        char[] arr = new char[newLength];
+        System.arraycopy(chars, 0, arr, 0, length);
+        --newLength;
+        arr[newLength] = '\0';
         for (int i = length -1; i > 0; i--) {
             if (chars[i] != ' ') {
-                chars[newLength] = chars[i];
+                arr[newLength] = chars[i];
                 --newLength;
             } else {
-                chars[newLength] = '%'; --newLength;
-                chars[newLength] = '2'; --newLength;
-                chars[newLength] = '0'; --newLength;
+                arr[newLength] = '%'; --newLength;
+                arr[newLength] = '2'; --newLength;
+                arr[newLength] = '0'; --newLength;
             }
         }
+        System.out.println(arr);
     }
 }
