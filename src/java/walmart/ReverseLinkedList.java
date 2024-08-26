@@ -17,7 +17,12 @@ public class ReverseLinkedList {
         Node nodeC = new Node('c', nodeD);
         Node nodeB = new Node('b', nodeC);
         Node nodeA = new Node('a', nodeB);
+        printList(nodeA);
         Node result = new ReverseLinkedList().reverse(nodeA);
+        printList(result);
+    }
+
+    private static void printList(Node result) {
         while (true) {
             System.out.print(result.value + " -> ");
             result = result.nextNode;

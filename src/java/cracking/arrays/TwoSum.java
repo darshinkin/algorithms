@@ -43,6 +43,7 @@ public class TwoSum {
     }
 
     private int[] findTwoNumbersAsSumWithTwoPointers(int[] arr, int sum) {
+        Arrays.stream(arr).sorted().toArray();
         int s = 0, e = arr.length-1;
         while (s < e) {
             if (arr[s] + arr[e] == sum) {

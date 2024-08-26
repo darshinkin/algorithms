@@ -2,12 +2,13 @@ package walmart;
 
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Set;
 
 public class ArrayFindSingleOccurringElement {
 
     public static void main(String[] args) {
-        int[] arr = {3,1,5,1,7,3,5};
+        int[] arr = {3,1,5,1,10,10,6,7,3,5};
 //        int[] arr = {5,1,5};
 //        int[] arr = {5};
 //        int res = new ArrayFindSingleOccurringElement().find(arr);
@@ -25,7 +26,16 @@ public class ArrayFindSingleOccurringElement {
                 set.remove(el);
             }
         }
-        return set.iterator().next();
+//        return set.iterator().next();
+        int max = -1;
+        Iterator<Integer> iterator = set.iterator();
+        while (iterator.hasNext()) {
+            int el = iterator.next();
+            if (el > max) {
+                max = el;
+            }
+        }
+        return max;
     }
 
     private int find(int[] arr) {
